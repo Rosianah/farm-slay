@@ -13,7 +13,16 @@ class CustomUser(AbstractUser):
 
   location = models.CharField(max_length=100, default='')
   phoneNumber = models.IntegerField(default=0)
-  
+  is_farmer = models.BooleanField(default=False)
 
-  def __str__(self):
-     return self.email
+class Crop (models.Model):
+	crop_id = models.AutoField(primary_key=True)
+	plant_date = models.DateField()
+	harvest_date = models.DateField()
+
+class Farmer(models.Model):
+
+	user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, primary_key=True)
+	crop = models.ForeignKey(Crop, on_delete=models.CASCADE)
+
+

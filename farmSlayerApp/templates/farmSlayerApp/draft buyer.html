@@ -1,0 +1,103 @@
+{{for f in farmers}}
+{{for c in crops}}
+{{c.photo.url}}
+{{c.quality}}
+{{c.development}}
+{{endfor}}
+{{endfor}}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Buyer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static "farmSlayerApp/buyer.css" %}>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">AgRight</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Farmers</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron" >
+  <div class="container text-center">
+    <h1>AgRight</h1>      
+    <p>Plant it, Snap it, Slay it</p>
+  </div>
+</div>
+  
+
+<div class="main" id="main"> 
+  
+<div class="container-fluid bg-3 text-center"> 
+  <h3>Our Farmers</h3>
+</div>  
+  <div class="row">
+    <div class="card col-sm-4" >
+      <img class="card-img-top" src="https://i0.wp.com/farmerstrend.co.ke/wp-content/uploads/2015/09/maize.jpg?resize=450%2C300&ssl=1" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h3 class="card-title">Farmers Name: Shamba Bora</h3>
+        <h4 class="card-title">Email: shambabora@outlook.com</h4>
+        <p class="card-text">Phone Number: +254700 000 000 </p>
+        <p class="card-text">Growth Stage: Development Stage, 3weeks old.</p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+      
+    <div class="card col-sm-4" >
+        <img class="card-img-top" src="http://static.op-mobile.opera.com/affive-18080/wp-content/uploads/2018/11/maize.jpg" alt="Card image" style="width:100%">
+        <div class="card-body">
+          <h3 class="card-title">Farmers Name: Mzee Akili</h3>
+          <h4 class="card-title">Email: mzeeakili@outlook.com</h4>
+          <p class="card-text">Phone Number: +254700 000 000 </p>
+          <p class="card-text">Growth Stage: Ready for harvest.</p>
+          <a href="#" class="btn btn-primary">See Profile</a>
+        </div>
+    </div>
+
+      <div class="card col-sm-4">
+          <img class="card-img-top" src="https://www.standardmedia.co.ke/images/tuesday/sdwtuju4ezevwr9p1ti5ba0ed4b98a75.jpg" alt="Card image" style="width:100%">
+          <div class="card-body">
+            <h3 class="card-title">Farmers Name: Mkulima Hodari</h3>
+            <h4 class="card-title">Email: mkulimahodari@outlook.com</h4>
+            <p class="card-text">Phone Number: +254700 000 000 </p>
+            <p class="card-text">Growth Stage: Sprout Stage, 2weeks old.</p>
+            <a href="#" class="btn btn-primary">See Profile</a>
+          </div>
+      </div>
+  </div>
+</div><br><br>
+
+<footer class="container-fluid text-center">
+  <p>AgRight Solutions: Plant it, Snap it, Slay it </p>
+</footer>
+
+</body>
+</html>

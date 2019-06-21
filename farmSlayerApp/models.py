@@ -15,14 +15,18 @@ class CustomUser(AbstractUser):
   phoneNumber = models.IntegerField(default=0)
   is_farmer = models.BooleanField(default=False)
 
+
+
 class Crop (models.Model):
 	crop_id = models.AutoField(primary_key=True)
-	plant_date = models.DateField()
-	harvest_date = models.DateField()
+	photo = models.ImageField(upload_to='media')
+	"""
+	pest = models.CharField(max_length=100, default='')
+	quality = models.CharField(max_length=100, default='')
+	"""
+	user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
 
-class Farmer(models.Model):
 
-	user = models.OneToOneField(CustomUser, on_delete=models.CASCADE, primary_key=True)
-	crop = models.ForeignKey(Crop, on_delete=models.CASCADE)
+	
 
 
